@@ -1,0 +1,644 @@
+[Epoch: 1/1000] 5.8s loss_train: 0.697309 loss_valid: 0.681574
+[Performance] loss_valid improved from inf to 0.681574, Saved model to model.pkg
+[Epoch: 2/1000] 5.9s loss_train: 0.696039 loss_valid: 0.689519
+[Performance] loss_valid did not improve.
+[Epoch: 3/1000] 5.9s loss_train: 0.715046 loss_valid: 0.671053
+[Performance] loss_valid improved from 0.681574 to 0.671053, Saved model to model.pkg
+[Epoch: 4/1000] 5.9s loss_train: 0.702138 loss_valid: 0.662904
+[Performance] loss_valid improved from 0.671053 to 0.662904, Saved model to model.pkg
+[Epoch: 5/1000] 5.8s loss_train: 0.681883 loss_valid: 0.653211
+[Performance] loss_valid improved from 0.662904 to 0.653211, Saved model to model.pkg
+[Epoch: 6/1000] 5.9s loss_train: 0.635350 loss_valid: 0.630903
+[Performance] loss_valid improved from 0.653211 to 0.630903, Saved model to model.pkg
+[Epoch: 7/1000] 5.9s loss_train: 0.565019 loss_valid: 0.608223
+[Performance] loss_valid improved from 0.630903 to 0.608223, Saved model to model.pkg
+[Epoch: 8/1000] 5.9s loss_train: 0.499984 loss_valid: 0.595564
+[Performance] loss_valid improved from 0.608223 to 0.595564, Saved model to model.pkg
+[Epoch: 9/1000] 5.9s loss_train: 0.446219 loss_valid: 0.574990
+[Performance] loss_valid improved from 0.595564 to 0.574990, Saved model to model.pkg
+[Epoch: 10/1000] 5.9s loss_train: 0.387933 loss_valid: 0.563250
+[Performance] loss_valid improved from 0.574990 to 0.563250, Saved model to model.pkg
+[Epoch: 11/1000] 5.9s loss_train: 0.365320 loss_valid: 0.556257
+[Performance] loss_valid improved from 0.563250 to 0.556257, Saved model to model.pkg
+[Epoch: 12/1000] 5.9s loss_train: 0.371925 loss_valid: 0.565435
+[Performance] loss_valid did not improve.
+[Epoch: 13/1000] 5.9s loss_train: 0.313251 loss_valid: 0.566116
+[Performance] loss_valid did not improve.
+[Epoch: 14/1000] 5.9s loss_train: 0.274264 loss_valid: 0.545273
+[Performance] loss_valid improved from 0.556257 to 0.545273, Saved model to model.pkg
+[Epoch: 15/1000] 5.9s loss_train: 0.237737 loss_valid: 0.550382
+[Performance] loss_valid did not improve.
+[Epoch: 16/1000] 5.9s loss_train: 0.243343 loss_valid: 0.533948
+[Performance] loss_valid improved from 0.545273 to 0.533948, Saved model to model.pkg
+[Epoch: 17/1000] 5.9s loss_train: 0.205843 loss_valid: 0.546307
+[Performance] loss_valid did not improve.
+[Epoch: 18/1000] 5.9s loss_train: 0.196774 loss_valid: 0.523944
+[Performance] loss_valid improved from 0.533948 to 0.523944, Saved model to model.pkg
+[Epoch: 19/1000] 5.9s loss_train: 0.158787 loss_valid: 0.523558
+[Performance] loss_valid improved from 0.523944 to 0.523558, Saved model to model.pkg
+[Epoch: 20/1000] 5.9s loss_train: 0.134535 loss_valid: 0.545463
+[Performance] loss_valid did not improve.
+[Epoch: 21/1000] 5.9s loss_train: 0.150072 loss_valid: 0.523282
+[Performance] loss_valid improved from 0.523558 to 0.523282, Saved model to model.pkg
+[Epoch: 22/1000] 5.9s loss_train: 0.137237 loss_valid: 0.537378
+[Performance] loss_valid did not improve.
+[Epoch: 23/1000] 5.9s loss_train: 0.130294 loss_valid: 0.561110
+[Performance] loss_valid did not improve.
+[Epoch: 24/1000] 5.9s loss_train: 0.172382 loss_valid: 0.585218
+[Performance] loss_valid did not improve.
+[Epoch: 25/1000] 5.9s loss_train: 0.119083 loss_valid: 0.598167
+[Performance] loss_valid did not improve.
+[Epoch: 26/1000] 5.9s loss_train: 0.133569 loss_valid: 0.560370
+[Performance] loss_valid did not improve.
+[Epoch: 27/1000] 5.9s loss_train: 0.078803 loss_valid: 0.655506
+[Performance] loss_valid did not improve.
+[Epoch: 28/1000] 5.9s loss_train: 0.099117 loss_valid: 0.619944
+[Performance] loss_valid did not improve.
+[Epoch: 29/1000] 5.9s loss_train: 0.089382 loss_valid: 0.701565
+[Performance] loss_valid did not improve.
+[Epoch: 30/1000] 5.9s loss_train: 0.105054 loss_valid: 0.595743
+[Performance] loss_valid did not improve.
+[Epoch: 31/1000] 5.9s loss_train: 0.107070 loss_valid: 0.573037
+[Performance] loss_valid did not improve.
+[Epoch: 32/1000] 5.9s loss_train: 0.077486 loss_valid: 0.609973
+[Performance] loss_valid did not improve.
+[Epoch: 33/1000] 5.9s loss_train: 0.090923 loss_valid: 0.580947
+[Performance] loss_valid did not improve.
+[Epoch: 34/1000] 5.9s loss_train: 0.055915 loss_valid: 0.628174
+[Performance] loss_valid did not improve.
+[Epoch: 35/1000] 5.9s loss_train: 0.094040 loss_valid: 0.670838
+[Performance] loss_valid did not improve.
+[Epoch: 36/1000] 5.9s loss_train: 0.056900 loss_valid: 0.644251
+[Performance] loss_valid did not improve.
+[Epoch: 37/1000] 5.9s loss_train: 0.066651 loss_valid: 0.597399
+[Performance] loss_valid did not improve.
+[Epoch: 38/1000] 5.9s loss_train: 0.052070 loss_valid: 0.660376
+[Performance] loss_valid did not improve.
+[Epoch: 39/1000] 5.9s loss_train: 0.072189 loss_valid: 0.658946
+[Performance] loss_valid did not improve.
+[Epoch: 40/1000] 6.0s loss_train: 0.046405 loss_valid: 0.665805
+[Performance] loss_valid did not improve.
+[Epoch: 41/1000] 5.9s loss_train: 0.049902 loss_valid: 0.674682
+[Performance] loss_valid did not improve.
+[Epoch: 42/1000] 5.9s loss_train: 0.063851 loss_valid: 0.772396
+[Performance] loss_valid did not improve.
+[Epoch: 43/1000] 5.9s loss_train: 0.046956 loss_valid: 0.757086
+[Performance] loss_valid did not improve.
+[Epoch: 44/1000] 5.9s loss_train: 0.042012 loss_valid: 0.824111
+[Performance] loss_valid did not improve.
+[Epoch: 45/1000] 5.9s loss_train: 0.038548 loss_valid: 0.712311
+[Performance] loss_valid did not improve.
+[Epoch: 46/1000] 5.9s loss_train: 0.060494 loss_valid: 0.859943
+[Performance] loss_valid did not improve.
+[Epoch: 47/1000] 5.9s loss_train: 0.074100 loss_valid: 0.712567
+[Performance] loss_valid did not improve.
+[Epoch: 48/1000] 5.9s loss_train: 0.112185 loss_valid: 0.720829
+[Performance] loss_valid did not improve.
+[Epoch: 49/1000] 5.9s loss_train: 0.068372 loss_valid: 0.642322
+[Performance] loss_valid did not improve.
+[Epoch: 50/1000] 5.9s loss_train: 0.047396 loss_valid: 0.748276
+[Performance] loss_valid did not improve.
+[Epoch: 51/1000] 5.9s loss_train: 0.044671 loss_valid: 0.795406
+[Performance] loss_valid did not improve.
+[Epoch: 52/1000] 5.9s loss_train: 0.037314 loss_valid: 0.766639
+[Performance] loss_valid did not improve.
+[Epoch: 53/1000] 5.9s loss_train: 0.037146 loss_valid: 0.627967
+[Performance] loss_valid did not improve.
+[Epoch: 54/1000] 5.9s loss_train: 0.037768 loss_valid: 0.703759
+[Performance] loss_valid did not improve.
+[Epoch: 55/1000] 5.9s loss_train: 0.040016 loss_valid: 0.801818
+[Performance] loss_valid did not improve.
+[Epoch: 56/1000] 5.9s loss_train: 0.070273 loss_valid: 0.905868
+[Performance] loss_valid did not improve.
+[Epoch: 57/1000] 6.0s loss_train: 0.059794 loss_valid: 0.738453
+[Performance] loss_valid did not improve.
+[Epoch: 58/1000] 5.9s loss_train: 0.049492 loss_valid: 0.695355
+[Performance] loss_valid did not improve.
+[Epoch: 59/1000] 5.9s loss_train: 0.065696 loss_valid: 0.752763
+[Performance] loss_valid did not improve.
+[Epoch: 60/1000] 5.9s loss_train: 0.012086 loss_valid: 0.903468
+[Performance] loss_valid did not improve.
+[Epoch: 61/1000] 6.0s loss_train: 0.028183 loss_valid: 0.831786
+[Performance] loss_valid did not improve.
+[Epoch: 62/1000] 5.9s loss_train: 0.022592 loss_valid: 0.805563
+[Performance] loss_valid did not improve.
+[Epoch: 63/1000] 5.9s loss_train: 0.040519 loss_valid: 0.999136
+[Performance] loss_valid did not improve.
+[Epoch: 64/1000] 5.9s loss_train: 0.022957 loss_valid: 1.068992
+[Performance] loss_valid did not improve.
+[Epoch: 65/1000] 5.9s loss_train: 0.017038 loss_valid: 1.029045
+[Performance] loss_valid did not improve.
+[Epoch: 66/1000] 5.9s loss_train: 0.027969 loss_valid: 0.939888
+[Performance] loss_valid did not improve.
+[Epoch: 67/1000] 5.9s loss_train: 0.016445 loss_valid: 1.093655
+[Performance] loss_valid did not improve.
+[Epoch: 68/1000] 5.9s loss_train: 0.017155 loss_valid: 1.110575
+[Performance] loss_valid did not improve.
+[Epoch: 69/1000] 5.9s loss_train: 0.016985 loss_valid: 1.233242
+[Performance] loss_valid did not improve.
+[Epoch: 70/1000] 5.9s loss_train: 0.010409 loss_valid: 1.237820
+[Performance] loss_valid did not improve.
+[Epoch: 71/1000] 5.9s loss_train: 0.029577 loss_valid: 1.247262
+[Performance] loss_valid did not improve.
+[Epoch: 72/1000] 5.9s loss_train: 0.012380 loss_valid: 1.314487
+[Performance] loss_valid did not improve.
+[Epoch: 73/1000] 5.9s loss_train: 0.020186 loss_valid: 1.323857
+[Performance] loss_valid did not improve.
+[Epoch: 74/1000] 5.9s loss_train: 0.029102 loss_valid: 1.172525
+[Performance] loss_valid did not improve.
+[Epoch: 75/1000] 5.9s loss_train: 0.021228 loss_valid: 1.060309
+[Performance] loss_valid did not improve.
+[Epoch: 76/1000] 5.9s loss_train: 0.016320 loss_valid: 1.133559
+[Performance] loss_valid did not improve.
+[Epoch: 77/1000] 5.9s loss_train: 0.012761 loss_valid: 1.331313
+[Performance] loss_valid did not improve.
+[Epoch: 78/1000] 6.0s loss_train: 0.015757 loss_valid: 1.300730
+[Performance] loss_valid did not improve.
+[Epoch: 79/1000] 5.9s loss_train: 0.028845 loss_valid: 1.298126
+[Performance] loss_valid did not improve.
+[Epoch: 80/1000] 5.9s loss_train: 0.015054 loss_valid: 1.331638
+[Performance] loss_valid did not improve.
+[Epoch: 81/1000] 5.9s loss_train: 0.015447 loss_valid: 1.316153
+[Performance] loss_valid did not improve.
+[Epoch: 82/1000] 5.9s loss_train: 0.022557 loss_valid: 1.308242
+[Performance] loss_valid did not improve.
+[Epoch: 83/1000] 5.9s loss_train: 0.016450 loss_valid: 1.297796
+[Performance] loss_valid did not improve.
+[Epoch: 84/1000] 5.9s loss_train: 0.015931 loss_valid: 1.531849
+[Performance] loss_valid did not improve.
+[Epoch: 85/1000] 5.9s loss_train: 0.018580 loss_valid: 1.441634
+[Performance] loss_valid did not improve.
+[Epoch: 86/1000] 5.9s loss_train: 0.007633 loss_valid: 1.387364
+[Performance] loss_valid did not improve.
+[Epoch: 87/1000] 5.9s loss_train: 0.019049 loss_valid: 1.435518
+[Performance] loss_valid did not improve.
+[Epoch: 88/1000] 5.9s loss_train: 0.019199 loss_valid: 1.477426
+[Performance] loss_valid did not improve.
+[Epoch: 89/1000] 5.9s loss_train: 0.018266 loss_valid: 1.604243
+[Performance] loss_valid did not improve.
+[Epoch: 90/1000] 5.9s loss_train: 0.016615 loss_valid: 1.633983
+[Performance] loss_valid did not improve.
+[Epoch: 91/1000] 5.9s loss_train: 0.031462 loss_valid: 1.119348
+[Performance] loss_valid did not improve.
+[Epoch: 92/1000] 5.9s loss_train: 0.024493 loss_valid: 1.499621
+[Performance] loss_valid did not improve.
+[Epoch: 93/1000] 5.9s loss_train: 0.018147 loss_valid: 1.208275
+[Performance] loss_valid did not improve.
+[Epoch: 94/1000] 5.9s loss_train: 0.007846 loss_valid: 1.282415
+[Performance] loss_valid did not improve.
+[Epoch: 95/1000] 6.0s loss_train: 0.024733 loss_valid: 1.392354
+[Performance] loss_valid did not improve.
+[Epoch: 96/1000] 5.9s loss_train: 0.006980 loss_valid: 1.488430
+[Performance] loss_valid did not improve.
+[Epoch: 97/1000] 5.9s loss_train: 0.013412 loss_valid: 1.729273
+[Performance] loss_valid did not improve.
+[Epoch: 98/1000] 5.9s loss_train: 0.012898 loss_valid: 1.640552
+[Performance] loss_valid did not improve.
+[Epoch: 99/1000] 6.0s loss_train: 0.012762 loss_valid: 1.695943
+[Performance] loss_valid did not improve.
+[Epoch: 100/1000] 5.9s loss_train: 0.009673 loss_valid: 1.885239
+[Performance] loss_valid did not improve.
+[Epoch: 101/1000] 5.9s loss_train: 0.004292 loss_valid: 1.881412
+[Performance] loss_valid did not improve.
+[Epoch: 102/1000] 5.9s loss_train: 0.005849 loss_valid: 1.987559
+[Performance] loss_valid did not improve.
+[Epoch: 103/1000] 5.9s loss_train: 0.011566 loss_valid: 2.068288
+[Performance] loss_valid did not improve.
+[Epoch: 104/1000] 5.9s loss_train: 0.004389 loss_valid: 2.180294
+[Performance] loss_valid did not improve.
+[Epoch: 105/1000] 5.9s loss_train: 0.005676 loss_valid: 2.082903
+[Performance] loss_valid did not improve.
+[Epoch: 106/1000] 5.9s loss_train: 0.004732 loss_valid: 2.297034
+[Performance] loss_valid did not improve.
+[Epoch: 107/1000] 6.0s loss_train: 0.012348 loss_valid: 2.201093
+[Performance] loss_valid did not improve.
+[Epoch: 108/1000] 5.9s loss_train: 0.005801 loss_valid: 2.171315
+[Performance] loss_valid did not improve.
+[Epoch: 109/1000] 6.0s loss_train: 0.006300 loss_valid: 2.055066
+[Performance] loss_valid did not improve.
+[Epoch: 110/1000] 5.9s loss_train: 0.015905 loss_valid: 2.346881
+[Performance] loss_valid did not improve.
+[Epoch: 111/1000] 5.9s loss_train: 0.005432 loss_valid: 1.986858
+[Performance] loss_valid did not improve.
+[Epoch: 112/1000] 5.9s loss_train: 0.002406 loss_valid: 2.270865
+[Performance] loss_valid did not improve.
+[Epoch: 113/1000] 5.9s loss_train: 0.006502 loss_valid: 2.191261
+[Performance] loss_valid did not improve.
+[Epoch: 114/1000] 6.0s loss_train: 0.004161 loss_valid: 2.240089
+[Performance] loss_valid did not improve.
+[Epoch: 115/1000] 5.9s loss_train: 0.002335 loss_valid: 2.517904
+[Performance] loss_valid did not improve.
+[Epoch: 116/1000] 6.0s loss_train: 0.007685 loss_valid: 2.262551
+[Performance] loss_valid did not improve.
+[Epoch: 117/1000] 6.0s loss_train: 0.004592 loss_valid: 2.028622
+[Performance] loss_valid did not improve.
+[Epoch: 118/1000] 6.0s loss_train: 0.010646 loss_valid: 2.303403
+[Performance] loss_valid did not improve.
+[Epoch: 119/1000] 6.0s loss_train: 0.005789 loss_valid: 2.155890
+[Performance] loss_valid did not improve.
+[Epoch: 120/1000] 5.9s loss_train: 0.012230 loss_valid: 2.332637
+[Performance] loss_valid did not improve.
+[Epoch: 121/1000] 6.0s loss_train: 0.002683 loss_valid: 2.429444
+[Performance] loss_valid did not improve.
+[Epoch: 122/1000] 6.0s loss_train: 0.011995 loss_valid: 2.298943
+[Performance] loss_valid did not improve.
+[Epoch: 123/1000] 6.0s loss_train: 0.003756 loss_valid: 2.639767
+[Performance] loss_valid did not improve.
+[Epoch: 124/1000] 6.0s loss_train: 0.010083 loss_valid: 2.289467
+[Performance] loss_valid did not improve.
+[Epoch: 125/1000] 6.0s loss_train: 0.015249 loss_valid: 2.462980
+[Performance] loss_valid did not improve.
+[Epoch: 126/1000] 6.0s loss_train: 0.006418 loss_valid: 2.352338
+[Performance] loss_valid did not improve.
+[Epoch: 127/1000] 6.0s loss_train: 0.004240 loss_valid: 2.549809
+[Performance] loss_valid did not improve.
+[Epoch: 128/1000] 6.0s loss_train: 0.014649 loss_valid: 2.331826
+[Performance] loss_valid did not improve.
+[Epoch: 129/1000] 6.0s loss_train: 0.000966 loss_valid: 2.637242
+[Performance] loss_valid did not improve.
+[Epoch: 130/1000] 6.0s loss_train: 0.005649 loss_valid: 2.398466
+[Performance] loss_valid did not improve.
+[Epoch: 131/1000] 6.0s loss_train: 0.005179 loss_valid: 2.574785
+[Performance] loss_valid did not improve.
+[Epoch: 132/1000] 6.0s loss_train: 0.007278 loss_valid: 2.543746
+[Performance] loss_valid did not improve.
+[Epoch: 133/1000] 6.0s loss_train: 0.007395 loss_valid: 2.861564
+[Performance] loss_valid did not improve.
+[Epoch: 134/1000] 6.0s loss_train: 0.002046 loss_valid: 2.468702
+[Performance] loss_valid did not improve.
+[Epoch: 135/1000] 6.0s loss_train: 0.002715 loss_valid: 3.017613
+[Performance] loss_valid did not improve.
+[Epoch: 136/1000] 6.0s loss_train: 0.018640 loss_valid: 2.555243
+[Performance] loss_valid did not improve.
+[Epoch: 137/1000] 6.0s loss_train: 0.003473 loss_valid: 2.797599
+[Performance] loss_valid did not improve.
+[Epoch: 138/1000] 6.0s loss_train: 0.004926 loss_valid: 2.544123
+[Performance] loss_valid did not improve.
+[Epoch: 139/1000] 6.0s loss_train: 0.005627 loss_valid: 2.983518
+[Performance] loss_valid did not improve.
+[Epoch: 140/1000] 6.0s loss_train: 0.005239 loss_valid: 2.541111
+[Performance] loss_valid did not improve.
+[Epoch: 141/1000] 6.0s loss_train: 0.003541 loss_valid: 2.824593
+[Performance] loss_valid did not improve.
+[Epoch: 142/1000] 6.0s loss_train: 0.002081 loss_valid: 2.560079
+[Performance] loss_valid did not improve.
+[Epoch: 143/1000] 6.0s loss_train: 0.007643 loss_valid: 2.875324
+[Performance] loss_valid did not improve.
+[Epoch: 144/1000] 6.0s loss_train: 0.002855 loss_valid: 2.449949
+[Performance] loss_valid did not improve.
+[Epoch: 145/1000] 6.0s loss_train: 0.022383 loss_valid: 3.058496
+[Performance] loss_valid did not improve.
+[Epoch: 146/1000] 6.0s loss_train: 0.006030 loss_valid: 2.520325
+[Performance] loss_valid did not improve.
+[Epoch: 147/1000] 6.0s loss_train: 0.007749 loss_valid: 2.941002
+[Performance] loss_valid did not improve.
+[Epoch: 148/1000] 6.0s loss_train: 0.006378 loss_valid: 2.600223
+[Performance] loss_valid did not improve.
+[Epoch: 149/1000] 6.0s loss_train: 0.002826 loss_valid: 2.922753
+[Performance] loss_valid did not improve.
+[Epoch: 150/1000] 6.0s loss_train: 0.020438 loss_valid: 2.935337
+[Performance] loss_valid did not improve.
+[Epoch: 151/1000] 6.0s loss_train: 0.005517 loss_valid: 2.970389
+[Performance] loss_valid did not improve.
+[Epoch: 152/1000] 6.0s loss_train: 0.004612 loss_valid: 2.755418
+[Performance] loss_valid did not improve.
+[Epoch: 153/1000] 6.0s loss_train: 0.004989 loss_valid: 2.931267
+[Performance] loss_valid did not improve.
+[Epoch: 154/1000] 6.0s loss_train: 0.002500 loss_valid: 2.971015
+[Performance] loss_valid did not improve.
+[Epoch: 155/1000] 6.0s loss_train: 0.004555 loss_valid: 3.067409
+[Performance] loss_valid did not improve.
+[Epoch: 156/1000] 6.0s loss_train: 0.004340 loss_valid: 3.024826
+[Performance] loss_valid did not improve.
+[Epoch: 157/1000] 6.0s loss_train: 0.003595 loss_valid: 3.068869
+[Performance] loss_valid did not improve.
+[Epoch: 158/1000] 6.0s loss_train: 0.007848 loss_valid: 3.103678
+[Performance] loss_valid did not improve.
+[Epoch: 159/1000] 6.0s loss_train: 0.003711 loss_valid: 3.228402
+[Performance] loss_valid did not improve.
+[Epoch: 160/1000] 6.0s loss_train: 0.001745 loss_valid: 3.068118
+[Performance] loss_valid did not improve.
+[Epoch: 161/1000] 6.0s loss_train: 0.003351 loss_valid: 2.993943
+[Performance] loss_valid did not improve.
+[Epoch: 162/1000] 6.0s loss_train: 0.003648 loss_valid: 3.137549
+[Performance] loss_valid did not improve.
+[Epoch: 163/1000] 6.0s loss_train: 0.002904 loss_valid: 3.340975
+[Performance] loss_valid did not improve.
+[Epoch: 164/1000] 6.0s loss_train: 0.023704 loss_valid: 3.250607
+[Performance] loss_valid did not improve.
+[Epoch: 165/1000] 6.0s loss_train: 0.003418 loss_valid: 2.905760
+[Performance] loss_valid did not improve.
+[Epoch: 166/1000] 6.0s loss_train: 0.004674 loss_valid: 2.828846
+[Performance] loss_valid did not improve.
+[Epoch: 167/1000] 6.0s loss_train: 0.003556 loss_valid: 2.891348
+[Performance] loss_valid did not improve.
+[Epoch: 168/1000] 6.0s loss_train: 0.004247 loss_valid: 2.963872
+[Performance] loss_valid did not improve.
+[Epoch: 169/1000] 6.0s loss_train: 0.000630 loss_valid: 3.205772
+[Performance] loss_valid did not improve.
+[Epoch: 170/1000] 6.0s loss_train: 0.003609 loss_valid: 3.186031
+[Performance] loss_valid did not improve.
+[Epoch: 171/1000] 6.0s loss_train: 0.002862 loss_valid: 3.366113
+[Performance] loss_valid did not improve.
+[Epoch: 172/1000] 6.0s loss_train: 0.001401 loss_valid: 3.418658
+[Performance] loss_valid did not improve.
+[Epoch: 173/1000] 6.0s loss_train: 0.013251 loss_valid: 3.323438
+[Performance] loss_valid did not improve.
+[Epoch: 174/1000] 5.9s loss_train: 0.004059 loss_valid: 3.420590
+[Performance] loss_valid did not improve.
+[Epoch: 175/1000] 6.0s loss_train: 0.010147 loss_valid: 3.561011
+[Performance] loss_valid did not improve.
+[Epoch: 176/1000] 6.0s loss_train: 0.001048 loss_valid: 3.360288
+[Performance] loss_valid did not improve.
+[Epoch: 177/1000] 6.0s loss_train: 0.001989 loss_valid: 3.444406
+[Performance] loss_valid did not improve.
+[Epoch: 178/1000] 6.0s loss_train: 0.002856 loss_valid: 3.497306
+[Performance] loss_valid did not improve.
+[Epoch: 179/1000] 6.0s loss_train: 0.001738 loss_valid: 3.603233
+[Performance] loss_valid did not improve.
+[Epoch: 180/1000] 6.0s loss_train: 0.009209 loss_valid: 3.347778
+[Performance] loss_valid did not improve.
+[Epoch: 181/1000] 6.0s loss_train: 0.003235 loss_valid: 3.767771
+[Performance] loss_valid did not improve.
+[Epoch: 182/1000] 6.0s loss_train: 0.003292 loss_valid: 3.561771
+[Performance] loss_valid did not improve.
+[Epoch: 183/1000] 6.0s loss_train: 0.007363 loss_valid: 3.429038
+[Performance] loss_valid did not improve.
+[Epoch: 184/1000] 6.0s loss_train: 0.012430 loss_valid: 3.296573
+[Performance] loss_valid did not improve.
+[Epoch: 185/1000] 6.0s loss_train: 0.005212 loss_valid: 3.337987
+[Performance] loss_valid did not improve.
+[Epoch: 186/1000] 6.0s loss_train: 0.001590 loss_valid: 3.319881
+[Performance] loss_valid did not improve.
+[Epoch: 187/1000] 6.0s loss_train: 0.004622 loss_valid: 3.278967
+[Performance] loss_valid did not improve.
+[Epoch: 188/1000] 6.0s loss_train: 0.003223 loss_valid: 3.325556
+[Performance] loss_valid did not improve.
+[Epoch: 189/1000] 6.0s loss_train: 0.000559 loss_valid: 3.711884
+[Performance] loss_valid did not improve.
+[Epoch: 190/1000] 6.0s loss_train: 0.003292 loss_valid: 3.617424
+[Performance] loss_valid did not improve.
+[Epoch: 191/1000] 6.0s loss_train: 0.003124 loss_valid: 3.610548
+[Performance] loss_valid did not improve.
+[Epoch: 192/1000] 6.0s loss_train: 0.001664 loss_valid: 3.712185
+[Performance] loss_valid did not improve.
+[Epoch: 193/1000] 6.0s loss_train: 0.001637 loss_valid: 3.727206
+[Performance] loss_valid did not improve.
+[Epoch: 194/1000] 6.0s loss_train: 0.004595 loss_valid: 3.690891
+[Performance] loss_valid did not improve.
+[Epoch: 195/1000] 6.0s loss_train: 0.004891 loss_valid: 3.864383
+[Performance] loss_valid did not improve.
+[Epoch: 196/1000] 6.0s loss_train: 0.002376 loss_valid: 3.865958
+[Performance] loss_valid did not improve.
+[Epoch: 197/1000] 6.0s loss_train: 0.000502 loss_valid: 3.881953
+[Performance] loss_valid did not improve.
+[Epoch: 198/1000] 6.0s loss_train: 0.001498 loss_valid: 4.021781
+[Performance] loss_valid did not improve.
+[Epoch: 199/1000] 6.0s loss_train: 0.008489 loss_valid: 4.041524
+[Performance] loss_valid did not improve.
+[Epoch: 200/1000] 6.0s loss_train: 0.001618 loss_valid: 3.983246
+[Performance] loss_valid did not improve.
+[Epoch: 201/1000] 6.0s loss_train: 0.002611 loss_valid: 3.950050
+[Performance] loss_valid did not improve.
+[Epoch: 202/1000] 6.0s loss_train: 0.003035 loss_valid: 4.026753
+[Performance] loss_valid did not improve.
+[Epoch: 203/1000] 6.0s loss_train: 0.005620 loss_valid: 3.949874
+[Performance] loss_valid did not improve.
+[Epoch: 204/1000] 6.0s loss_train: 0.002063 loss_valid: 4.041989
+[Performance] loss_valid did not improve.
+[Epoch: 205/1000] 6.0s loss_train: 0.000687 loss_valid: 3.918444
+[Performance] loss_valid did not improve.
+[Epoch: 206/1000] 6.0s loss_train: 0.004333 loss_valid: 3.957299
+[Performance] loss_valid did not improve.
+[Epoch: 207/1000] 6.0s loss_train: 0.005648 loss_valid: 4.037448
+[Performance] loss_valid did not improve.
+[Epoch: 208/1000] 6.0s loss_train: 0.009134 loss_valid: 4.056130
+[Performance] loss_valid did not improve.
+[Epoch: 209/1000] 6.0s loss_train: 0.000994 loss_valid: 4.189421
+[Performance] loss_valid did not improve.
+[Epoch: 210/1000] 6.0s loss_train: 0.002944 loss_valid: 4.059412
+[Performance] loss_valid did not improve.
+[Epoch: 211/1000] 6.0s loss_train: 0.000420 loss_valid: 4.158623
+[Performance] loss_valid did not improve.
+[Epoch: 212/1000] 6.0s loss_train: 0.004290 loss_valid: 4.049812
+[Performance] loss_valid did not improve.
+[Epoch: 213/1000] 6.0s loss_train: 0.004552 loss_valid: 4.059595
+[Performance] loss_valid did not improve.
+[Epoch: 214/1000] 6.0s loss_train: 0.001200 loss_valid: 4.156595
+[Performance] loss_valid did not improve.
+[Epoch: 215/1000] 6.0s loss_train: 0.005486 loss_valid: 4.369960
+[Performance] loss_valid did not improve.
+[Epoch: 216/1000] 6.0s loss_train: 0.001578 loss_valid: 4.267928
+[Performance] loss_valid did not improve.
+[Epoch: 217/1000] 5.9s loss_train: 0.000956 loss_valid: 4.272858
+[Performance] loss_valid did not improve.
+[Epoch: 218/1000] 6.0s loss_train: 0.001658 loss_valid: 4.232088
+[Performance] loss_valid did not improve.
+[Epoch: 219/1000] 5.9s loss_train: 0.005812 loss_valid: 4.485147
+[Performance] loss_valid did not improve.
+[Epoch: 220/1000] 6.0s loss_train: 0.002823 loss_valid: 4.199073
+[Performance] loss_valid did not improve.
+[Epoch: 221/1000] 6.0s loss_train: 0.003377 loss_valid: 4.301785
+[Performance] loss_valid did not improve.
+[Epoch: 222/1000] 6.0s loss_train: 0.000958 loss_valid: 4.328316
+[Performance] loss_valid did not improve.
+[Epoch: 223/1000] 6.0s loss_train: 0.001843 loss_valid: 4.342636
+[Performance] loss_valid did not improve.
+[Epoch: 224/1000] 6.0s loss_train: 0.004917 loss_valid: 4.351157
+[Performance] loss_valid did not improve.
+[Epoch: 225/1000] 6.0s loss_train: 0.005042 loss_valid: 4.401501
+[Performance] loss_valid did not improve.
+[Epoch: 226/1000] 5.9s loss_train: 0.005548 loss_valid: 4.356321
+[Performance] loss_valid did not improve.
+[Epoch: 227/1000] 6.0s loss_train: 0.008203 loss_valid: 4.351862
+[Performance] loss_valid did not improve.
+[Epoch: 228/1000] 5.9s loss_train: 0.002667 loss_valid: 4.231959
+[Performance] loss_valid did not improve.
+[Epoch: 229/1000] 6.0s loss_train: 0.004977 loss_valid: 4.381114
+[Performance] loss_valid did not improve.
+[Epoch: 230/1000] 6.0s loss_train: 0.000720 loss_valid: 4.397846
+[Performance] loss_valid did not improve.
+[Epoch: 231/1000] 6.0s loss_train: 0.006520 loss_valid: 4.377425
+[Performance] loss_valid did not improve.
+[Epoch: 232/1000] 6.0s loss_train: 0.000921 loss_valid: 4.284831
+[Performance] loss_valid did not improve.
+[Epoch: 233/1000] 6.0s loss_train: 0.000977 loss_valid: 4.240778
+[Performance] loss_valid did not improve.
+[Epoch: 234/1000] 6.0s loss_train: 0.010311 loss_valid: 4.349222
+[Performance] loss_valid did not improve.
+[Epoch: 235/1000] 6.0s loss_train: 0.002426 loss_valid: 4.569125
+[Performance] loss_valid did not improve.
+[Epoch: 236/1000] 5.9s loss_train: 0.000567 loss_valid: 4.342825
+[Performance] loss_valid did not improve.
+[Epoch: 237/1000] 6.0s loss_train: 0.003829 loss_valid: 4.203110
+[Performance] loss_valid did not improve.
+[Epoch: 238/1000] 6.0s loss_train: 0.016391 loss_valid: 4.228823
+[Performance] loss_valid did not improve.
+[Epoch: 239/1000] 6.0s loss_train: 0.001103 loss_valid: 4.373165
+[Performance] loss_valid did not improve.
+[Epoch: 240/1000] 6.0s loss_train: 0.001460 loss_valid: 4.341404
+[Performance] loss_valid did not improve.
+[Epoch: 241/1000] 6.0s loss_train: 0.002476 loss_valid: 4.408407
+[Performance] loss_valid did not improve.
+[Epoch: 242/1000] 6.0s loss_train: 0.009002 loss_valid: 4.500557
+[Performance] loss_valid did not improve.
+[Epoch: 243/1000] 6.0s loss_train: 0.001826 loss_valid: 4.509327
+[Performance] loss_valid did not improve.
+[Epoch: 244/1000] 6.0s loss_train: 0.001893 loss_valid: 4.445058
+[Performance] loss_valid did not improve.
+[Epoch: 245/1000] 6.0s loss_train: 0.007665 loss_valid: 4.469631
+[Performance] loss_valid did not improve.
+[Epoch: 246/1000] 5.9s loss_train: 0.006721 loss_valid: 4.460415
+[Performance] loss_valid did not improve.
+[Epoch: 247/1000] 6.0s loss_train: 0.002304 loss_valid: 4.508712
+[Performance] loss_valid did not improve.
+[Epoch: 248/1000] 6.0s loss_train: 0.002221 loss_valid: 4.540630
+[Performance] loss_valid did not improve.
+[Epoch: 249/1000] 6.0s loss_train: 0.001818 loss_valid: 4.490269
+[Performance] loss_valid did not improve.
+[Epoch: 250/1000] 5.9s loss_train: 0.000704 loss_valid: 4.557335
+[Performance] loss_valid did not improve.
+[Epoch: 251/1000] 6.0s loss_train: 0.002734 loss_valid: 4.382968
+[Performance] loss_valid did not improve.
+[Epoch: 252/1000] 6.0s loss_train: 0.002486 loss_valid: 4.568722
+[Performance] loss_valid did not improve.
+[Epoch: 253/1000] 6.0s loss_train: 0.002116 loss_valid: 4.386663
+[Performance] loss_valid did not improve.
+[Epoch: 254/1000] 6.0s loss_train: 0.008285 loss_valid: 4.552918
+[Performance] loss_valid did not improve.
+[Epoch: 255/1000] 6.0s loss_train: 0.001706 loss_valid: 4.550736
+[Performance] loss_valid did not improve.
+[Epoch: 256/1000] 5.9s loss_train: 0.000593 loss_valid: 4.484782
+[Performance] loss_valid did not improve.
+[Epoch: 257/1000] 6.0s loss_train: 0.004827 loss_valid: 4.483634
+[Performance] loss_valid did not improve.
+[Epoch: 258/1000] 6.0s loss_train: 0.000197 loss_valid: 4.578567
+[Performance] loss_valid did not improve.
+[Epoch: 259/1000] 6.0s loss_train: 0.001207 loss_valid: 4.657609
+[Performance] loss_valid did not improve.
+[Epoch: 260/1000] 6.0s loss_train: 0.004597 loss_valid: 4.686159
+[Performance] loss_valid did not improve.
+[Epoch: 261/1000] 5.9s loss_train: 0.001401 loss_valid: 4.601454
+[Performance] loss_valid did not improve.
+[Epoch: 262/1000] 6.0s loss_train: 0.004203 loss_valid: 4.573739
+[Performance] loss_valid did not improve.
+[Epoch: 263/1000] 5.9s loss_train: 0.007440 loss_valid: 4.425766
+[Performance] loss_valid did not improve.
+[Epoch: 264/1000] 6.0s loss_train: 0.000906 loss_valid: 4.490059
+[Performance] loss_valid did not improve.
+[Epoch: 265/1000] 6.0s loss_train: 0.001663 loss_valid: 4.611927
+[Performance] loss_valid did not improve.
+[Epoch: 266/1000] 5.9s loss_train: 0.001183 loss_valid: 4.659340
+[Performance] loss_valid did not improve.
+[Epoch: 267/1000] 6.0s loss_train: 0.004262 loss_valid: 4.637912
+[Performance] loss_valid did not improve.
+[Epoch: 268/1000] 6.0s loss_train: 0.000187 loss_valid: 4.642849
+[Performance] loss_valid did not improve.
+[Epoch: 269/1000] 6.0s loss_train: 0.001217 loss_valid: 4.616310
+[Performance] loss_valid did not improve.
+[Epoch: 270/1000] 6.0s loss_train: 0.001165 loss_valid: 4.669185
+[Performance] loss_valid did not improve.
+[Epoch: 271/1000] 6.0s loss_train: 0.000897 loss_valid: 4.745601
+[Performance] loss_valid did not improve.
+[Epoch: 272/1000] 6.0s loss_train: 0.001723 loss_valid: 4.700118
+[Performance] loss_valid did not improve.
+[Epoch: 273/1000] 6.0s loss_train: 0.003186 loss_valid: 4.654543
+[Performance] loss_valid did not improve.
+[Epoch: 274/1000] 6.0s loss_train: 0.000795 loss_valid: 4.648844
+[Performance] loss_valid did not improve.
+[Epoch: 275/1000] 6.0s loss_train: 0.000939 loss_valid: 4.709942
+[Performance] loss_valid did not improve.
+[Epoch: 276/1000] 6.0s loss_train: 0.003157 loss_valid: 4.587557
+[Performance] loss_valid did not improve.
+[Epoch: 277/1000] 6.0s loss_train: 0.000467 loss_valid: 4.611630
+[Performance] loss_valid did not improve.
+[Epoch: 278/1000] 5.9s loss_train: 0.016955 loss_valid: 4.635980
+[Performance] loss_valid did not improve.
+[Epoch: 279/1000] 6.0s loss_train: 0.001342 loss_valid: 4.788174
+[Performance] loss_valid did not improve.
+[Epoch: 280/1000] 6.0s loss_train: 0.000402 loss_valid: 4.871977
+[Performance] loss_valid did not improve.
+[Epoch: 281/1000] 6.0s loss_train: 0.009215 loss_valid: 4.842707
+[Performance] loss_valid did not improve.
+[Epoch: 282/1000] 6.0s loss_train: 0.000544 loss_valid: 4.733152
+[Performance] loss_valid did not improve.
+[Epoch: 283/1000] 6.0s loss_train: 0.001893 loss_valid: 4.798890
+[Performance] loss_valid did not improve.
+[Epoch: 284/1000] 6.0s loss_train: 0.001122 loss_valid: 4.693331
+[Performance] loss_valid did not improve.
+[Epoch: 285/1000] 6.0s loss_train: 0.000665 loss_valid: 4.651221
+[Performance] loss_valid did not improve.
+[Epoch: 286/1000] 6.0s loss_train: 0.003383 loss_valid: 4.673034
+[Performance] loss_valid did not improve.
+[Epoch: 287/1000] 6.0s loss_train: 0.001173 loss_valid: 4.659039
+[Performance] loss_valid did not improve.
+[Epoch: 288/1000] 5.9s loss_train: 0.001848 loss_valid: 4.675519
+[Performance] loss_valid did not improve.
+[Epoch: 289/1000] 6.0s loss_train: 0.005061 loss_valid: 4.630918
+[Performance] loss_valid did not improve.
+[Epoch: 290/1000] 6.0s loss_train: 0.004941 loss_valid: 4.651397
+[Performance] loss_valid did not improve.
+[Epoch: 291/1000] 6.0s loss_train: 0.001714 loss_valid: 4.624744
+[Performance] loss_valid did not improve.
+[Epoch: 292/1000] 6.0s loss_train: 0.001849 loss_valid: 4.627922
+[Performance] loss_valid did not improve.
+[Epoch: 293/1000] 5.9s loss_train: 0.000270 loss_valid: 4.672988
+[Performance] loss_valid did not improve.
+[Epoch: 294/1000] 5.9s loss_train: 0.008086 loss_valid: 4.726120
+[Performance] loss_valid did not improve.
+[Epoch: 295/1000] 5.9s loss_train: 0.000163 loss_valid: 4.732858
+[Performance] loss_valid did not improve.
+[Epoch: 296/1000] 6.0s loss_train: 0.001545 loss_valid: 4.723848
+[Performance] loss_valid did not improve.
+[Epoch: 297/1000] 5.9s loss_train: 0.011290 loss_valid: 4.835587
+[Performance] loss_valid did not improve.
+[Epoch: 298/1000] 6.0s loss_train: 0.005032 loss_valid: 4.904807
+[Performance] loss_valid did not improve.
+[Epoch: 299/1000] 5.9s loss_train: 0.001446 loss_valid: 4.981114
+[Performance] loss_valid did not improve.
+[Epoch: 300/1000] 5.9s loss_train: 0.001812 loss_valid: 4.909284
+[Performance] loss_valid did not improve.
+[Epoch: 301/1000] 5.9s loss_train: 0.000757 loss_valid: 4.867075
+[Performance] loss_valid did not improve.
+[Epoch: 302/1000] 6.0s loss_train: 0.003308 loss_valid: 4.941936
+[Performance] loss_valid did not improve.
+[Epoch: 303/1000] 5.9s loss_train: 0.000166 loss_valid: 4.897300
+[Performance] loss_valid did not improve.
+[Epoch: 304/1000] 6.0s loss_train: 0.001211 loss_valid: 4.880955
+[Performance] loss_valid did not improve.
+[Epoch: 305/1000] 5.9s loss_train: 0.016909 loss_valid: 4.866497
+[Performance] loss_valid did not improve.
+[Epoch: 306/1000] 6.0s loss_train: 0.000601 loss_valid: 4.945124
+[Performance] loss_valid did not improve.
+[Epoch: 307/1000] 6.0s loss_train: 0.000379 loss_valid: 5.052657
+[Performance] loss_valid did not improve.
+[Epoch: 308/1000] 5.9s loss_train: 0.000912 loss_valid: 5.010775
+[Performance] loss_valid did not improve.
+[Epoch: 309/1000] 6.0s loss_train: 0.004205 loss_valid: 4.927129
+[Performance] loss_valid did not improve.
+[Epoch: 310/1000] 5.9s loss_train: 0.001536 loss_valid: 4.758992
+[Performance] loss_valid did not improve.
+[Epoch: 311/1000] 6.0s loss_train: 0.005144 loss_valid: 4.783181
+[Performance] loss_valid did not improve.
+[Epoch: 312/1000] 5.9s loss_train: 0.000422 loss_valid: 4.855406
+[Performance] loss_valid did not improve.
+[Epoch: 313/1000] 6.0s loss_train: 0.006469 loss_valid: 4.815849
+[Performance] loss_valid did not improve.
+[Epoch: 314/1000] 6.0s loss_train: 0.002806 loss_valid: 4.854993
+[Performance] loss_valid did not improve.
+[Epoch: 315/1000] 6.0s loss_train: 0.001525 loss_valid: 4.971226
+[Performance] loss_valid did not improve.
+[Epoch: 316/1000] 6.0s loss_train: 0.001509 loss_valid: 4.916143
+[Performance] loss_valid did not improve.
+[Epoch: 317/1000] 5.9s loss_train: 0.002238 loss_valid: 4.865248
+[Performance] loss_valid did not improve.
+[Epoch: 318/1000] 6.0s loss_train: 0.000597 loss_valid: 4.898623
+[Performance] loss_valid did not improve.
+[Epoch: 319/1000] 5.9s loss_train: 0.000622 loss_valid: 4.883965
+[Performance] loss_valid did not improve.
+[Epoch: 320/1000] 6.0s loss_train: 0.002253 loss_valid: 4.911359
+[Performance] loss_valid did not improve.
+[Epoch: 321/1000] 5.9s loss_train: 0.002012 loss_valid: 4.967732
+[Performance] loss_valid did not improve.
+[Epoch: 322/1000] 5.9s loss_train: 0.000743 loss_valid: 4.928845
+[Performance] loss_valid did not improve.
