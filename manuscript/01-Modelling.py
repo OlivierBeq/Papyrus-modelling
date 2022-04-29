@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import os
-import sys
 import glob
 import argparse
 from typing import List, Optional, Tuple
