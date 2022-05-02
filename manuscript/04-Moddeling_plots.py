@@ -127,16 +127,17 @@ def average_over_descriptors(data: pd.DataFrame, split: str = 'random') -> Tuple
     return QSAR, PCM, DNN
 
 
-def plot_results(data: Union[pd.DataFrame, List[pd.DataFrame]]) -> Figure:
+def plot_results(data: Union[pd.DataFrame, List[pd.DataFrame]], horizontal: bool = False) -> Figure:
     """Plot modelling results
 
     :param data: list of averaged tabulated results for each model type
+    :param horizontal: arrange subplot horizontaly
     :return: matplotlib figure
     """
     # Cast input to list
     if not isinstance(data, list) and isinstance(data, pd.DataFrame):
         data = [data]
-    else:
+    elif not isinstance(data, list):
         raise TypeError('data must be a pandas dataframe or a list of dataframes')
     # Make scale of RMSE go from 0 to 1.5 when others go from 0 to 1.0
     scale = 2 / 3.0
@@ -146,7 +147,10 @@ def plot_results(data: Union[pd.DataFrame, List[pd.DataFrame]]) -> Figure:
         df.loc[:, 'target class'] = df.loc[:, 'target class'].apply(lambda x: ' '.join(f'${y}$' for y in x.split()))
     # Plot data
     if len(data) == 1:
-        fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(14, 10))
+        if horizontal:
+            fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(14, 8.5))
+        else:
+            fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(14, 8.5))
         g = sns.barplot(x='target class', y='value', hue='variable',
                         errwidth=1, capsize=0.1, ci='sd',
                         data=data[0], ax=ax, palette=sns.color_palette("Set2"))
@@ -167,18 +171,32 @@ def plot_results(data: Union[pd.DataFrame, List[pd.DataFrame]]) -> Figure:
         yminorLocator = LinearLocator(10 * 3 + 1)
         ax2.yaxis.set_minor_locator(yminorLocator)
 
-        _ = g.legend(loc='center left', bbox_to_anchor=(1.15, 0.5))
-        for t, l in zip(g.get_legend().texts, ['$MCC$', '$Pearson$ $r$', '$RMSE$']):
-            t.set_text(l)
+        if horizontal:
+            #_ = g.legend(loc='center left', bbox_to_anchor=(1.15, 0.5))
+            sns.move_legend(g, 'center left', bbox_to_anchor=(1.15, 0.5), title=None)
+            # LaTeX-ify the legend
+            for t, l in zip(g.get_legend().texts, ['$MCC$', '$Pearson$ $r$', '$RMSE$']):
+                t.set_text(l)
+        else:
+            sns.move_legend(g, 'upper center', bbox_to_anchor=(0.5, -0.1), ncol=3, title=None, frameon=False)
+            # LaTeX-ify the legend
+            for t, l in zip(g.get_legend().texts, ['$MCC$', '$Pearson$ $r$', '$RMSE$']):
+                t.set_text(l)
+
     else:
-        fig, axes = plt.subplots(nrows=len(data), ncols=1, figsize=(14, 20))
+        # Switch from vertical to horizontal layout
+        if horizontal:
+            fig, axes = plt.subplots(nrows=1, ncols=len(data), figsize=(len(data) * 14, 8.5))
+        else:
+            fig, axes = plt.subplots(nrows=len(data), ncols=1, figsize=(14, len(data) * 8.5))
+        # Plot results in their own subplot
         for i, df in enumerate(data):
             ax1 = axes[i]
             g1 = sns.barplot(x='target class', y='value', hue='variable',
                              errwidth=1, capsize=0.1, ci='sd',
                              data=df, ax=ax1, palette=sns.color_palette("Set2"))
             ax1.set_ylabel('$MCC$ $and$ $r_{Pearson}$')
-            ax2 = ax1.twinx()
+            ax2 = ax1.twinx()  # duplicate y axis
 
             ax1.set_ylim(0, 1.0)
             ax2.set_ylim(ax1.get_ylim())
@@ -194,9 +212,20 @@ def plot_results(data: Union[pd.DataFrame, List[pd.DataFrame]]) -> Figure:
             yminorLocator = LinearLocator(10 * 3 + 1)
             ax2.yaxis.set_minor_locator(yminorLocator)
 
-            _ = g1.legend(loc='center left', bbox_to_anchor=(1.15, 0.5))
-            for t, l in zip(g1.get_legend().texts, ['$MCC$', '$Pearson$ $r$', '$RMSE$']):
-                t.set_text(l)
+            # Hide legend unless last subplot
+            if i < len(data) - 1:
+                g1.legend([], [], frameon=False)
+            elif horizontal:
+                _ = g1.legend(loc='center left', bbox_to_anchor=(1.17, 0.5))
+                # LaTeX-ify the legend
+                for t, l in zip(g1.get_legend().texts, ['$MCC$', '$Pearson$ $r$', '$RMSE$']):
+                    t.set_text(l)
+            else:
+                sns.move_legend(g1, 'upper center', bbox_to_anchor=(0.5, -0.1), ncol=3, title=None, frameon=False)
+                # LaTeX-ify the legend
+                for t, l in zip(g1.get_legend().texts, ['$MCC$', '$Pearson$ $r$', '$RMSE$']):
+                    t.set_text(l)
+        plt.tight_layout()
     return fig
 
 
@@ -204,10 +233,11 @@ def main(pcm_qsar_folder: str,
          dnn_folder: str,
          evaluate: str,
          split: str,
-         outputs: Tuple[str, str, str]):
+         outputs: Tuple[str, str, str],
+         horizontal: bool = False):
     """Main function"""
-    if not isinstance(outputs, (list, tuple)) or len(outputs) != 3:
-        raise ValueError('three output file names must be provided')
+    if not isinstance(outputs, (list, tuple)) or len(outputs) != 4:
+        raise ValueError('four output file names must be provided')
     # Read in model performance summaries
     results = tabulate_results(pcm_qsar_folder=pcm_qsar_folder,
                                dnn_folder=dnn_folder,
@@ -215,13 +245,17 @@ def main(pcm_qsar_folder: str,
     # Average over descriptors
     QSAR, PCM, DNN = average_over_descriptors(data=results, split=split)
     # Generate plots
-    qsar_plot = plot_results(QSAR)
-    pcm_plot = plot_results(PCM)
-    dnn_plot = plot_results(DNN)
+    qsar_plot = plot_results(QSAR, horizontal=horizontal)
+    pcm_plot = plot_results(PCM, horizontal=horizontal)
+    dnn_plot = plot_results(DNN, horizontal=horizontal)
+    all_plot = plot_results([QSAR, PCM, DNN], horizontal=horizontal)
+    # Create output directory
+    os.makedirs('results_plots', exist_ok=True)
     # Save plots
-    qsar_plot.savefig(outputs[0])
-    pcm_plot.savefig(outputs[1])
-    dnn_plot.savefig(outputs[2])
+    qsar_plot.savefig(os.path.join('results_plots', outputs[0]))
+    pcm_plot.savefig(os.path.join('results_plots', outputs[1]))
+    dnn_plot.savefig(os.path.join('results_plots', outputs[2]))
+    all_plot.savefig(os.path.join('results_plots', outputs[3]))
 
 
 if __name__ == '__main__':
@@ -239,8 +273,8 @@ if __name__ == '__main__':
                         help='Directory containing Papyrus\'s DNN modelling results',
                         dest='dnn_indir')
     parser.add_argument('OUT_FILES',
-                        nargs=3,
-                        help='Names of the 3 output SVG files (QSAR, PCM and DNN respectively).')
+                        nargs=4,
+                        help='Names of the 4 output SVG files (QSAR, PCM, DNN and altogehter respectively).')
     parser.add_argument('-e', '--eval',
                         default='Test set',
                         choices=['Test set', 'Mean'],
@@ -254,9 +288,15 @@ if __name__ == '__main__':
                         required=False,
                         help=('Data split to be considered.'),
                         dest='split')
+    parser.add_argument('--horizontal',
+                        action='store_true',
+                        default=False,
+                        required=False,
+                        help='Make the combined plot be horizontal.')
     args = parser.parse_args()
     main(pcm_qsar_folder=args.indir,
          dnn_folder=args.dnn_indir,
          evaluate=args.eval,
-         split=args.split,
-         outputs=args.OUT_FILES)
+         split= 'random' if args.split == 'random' else 'year',
+         outputs=args.OUT_FILES,
+         horizontal=args.horizontal)
