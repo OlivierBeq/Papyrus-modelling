@@ -41,13 +41,14 @@ def main(root_folder: Optional[str],
          ignore_models: bool):
     if not os.path.isdir(out_folder):
         raise ValueError('out folder does not exist')
-    version = process_data_version(version)
+
     out_folder = os.path.abspath(out_folder)
     # Determine default paths
     if root_folder is not None:
         os.environ['PYSTOW_HOME'] = os.path.abspath(root_folder)
+    version = process_data_version(version, root_folder)
     papyrus_root = pystow.module('papyrus')
-    root_folder = papyrus_root.base.as_posix()
+    papyrus_root_folder = papyrus_root.base.as_posix()
     descriptor_folder = papyrus_root.join(version, 'descriptors').as_posix()
     # Create the subsets
     if len(glob.glob(os.path.join(out_folder, 'results_filtered*.txt.xz'))) != 5:
@@ -86,7 +87,7 @@ def main(root_folder: Optional[str],
                    ignore_models)
     # If PCM is toggled
     if pcm:
-        build_pcm(root_folder,
+        build_pcm(papyrus_root_folder,
                   descriptor_folder,
                   out_folder,
                   datasets,
@@ -110,7 +111,7 @@ def create_datasets(root_folder, version, out_folder):
     filter2 = keep_protein_class(filter1, protein_data, {'l5': 'Adenosine receptor'})
     data_filtered = consume_chunks(filter2, total=60)  # 60 = 59,763,781 aggregated points / 1,000,000 chunksize
     ## Save dataset to disk
-    data_filtered.to_csv(f'{out_folder}/results_filtered_AR_high.txt.xz', sep='\t', index=False)
+    data_filtered.to_csv(f'{out_folder}/results_filtered_ARs_high.txt.xz', sep='\t', index=False)
     del data_filtered
     # Kinases
     ## Apply data filters
@@ -298,7 +299,7 @@ if __name__ == '__main__':
                         help='Toggle creation of PCM models',
                         dest='pcm')
     parser.add_argument('-m',
-                        choices=['mold2', 'cddd', 'mordred', 'fingerprint', 'all'],
+                        choices=['mold2', 'cddd', 'mordred', 'fingerprint', 'moe', 'all'],
                         default=['fingerprint'],
                         nargs='+',
                         required=False,
@@ -308,6 +309,7 @@ if __name__ == '__main__':
                               '    - mordred: 2D mordred molecular descriptors (1613),\n'
                               '    - fingerprint: 2D RDKit Morgan fingerprint with radius 3\n'
                               '                   and 2048 bits,\n'
+                              '    - moe: 2D MOE descriptors (206),\n'
                               '    - all: all descriptors.\n'),
                         dest='mdescs')
     parser.add_argument('-p',
