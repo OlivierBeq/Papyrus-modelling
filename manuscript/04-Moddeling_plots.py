@@ -38,7 +38,7 @@ def tabulate_results(pcm_qsar_folder: str, dnn_folder:str, evaluate: str = 'Test
                                                                ['ECFP_6', 'CDDD', 'Mold2', 'Mordred2D'],
                                                                ['MCC', 'r', 'RMSE']]
                                                               ),
-                           index=pd.MultiIndex.from_product([['ARs', 'CCRs', 'Kinases', 'MonoamineRs', 'SLC6'],
+                           index=pd.MultiIndex.from_product([['ARs', 'CCRs', 'Kinases', 'MRs', 'SLC6'],
                                                              ['QSAR', 'PCM', 'stDNN PCM']]
                                                             )
                            )
@@ -91,7 +91,7 @@ def tabulate_results(pcm_qsar_folder: str, dnn_folder:str, evaluate: str = 'Test
         elif 'Kinases' in file_:
             target = 'Kinases'
         elif 'MonoamineRs' in file_:
-            target = 'MonoamineRs'
+            target = 'MRs'
         elif 'SLC6' in file_:
             target = 'SLC6'
         else:
@@ -277,7 +277,7 @@ if __name__ == '__main__':
                         help='Names of the 4 output SVG files (QSAR, PCM, DNN and altogehter respectively).')
     parser.add_argument('-e', '--eval',
                         default='Test set',
-                        choices=['Test set', 'Mean'],
+                        choices=['Test', 'CV'],
                         required=False,
                         help=('Results to be plotted (\'Test set\' for holdout set,'
                               ' \'Mean\' for average of cross-validation.'),
@@ -296,7 +296,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     main(pcm_qsar_folder=args.indir,
          dnn_folder=args.dnn_indir,
-         evaluate=args.eval,
+         evaluate='Test set' if args.eval == 'Test' else 'Mean',
          split= 'random' if args.split == 'random' else 'year',
          outputs=args.OUT_FILES,
          horizontal=args.horizontal)

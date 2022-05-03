@@ -15,7 +15,7 @@ ______
  
 1. Model activities with standard QSAR and PCM models,
     
-Create classification (-C), regression (-R) QSAR (-Q) and PCM (-P) models using each descriptor type one at a time splitting the data randomly (-s random) and temporaly (-s year).
+Create classification (-C), regression (-R) QSAR (-Q) and PCM (-P) models using each descriptor type one at a time splitting the data randomly (-s random) and temporally (-s year).
 ```bash
 python 01-Modelling.py -C -R -Q -P -m mold2 cddd mordred fingerprint -s random year
 ```
@@ -23,12 +23,15 @@ python 01-Modelling.py -C -R -Q -P -m mold2 cddd mordred fingerprint -s random y
 2. Then, model activities with single-task DNN PCM models,
 
 ```bash
-python 02-Modelling_DNNs_classification.py
-python 03-Modelling_DNNs_regression.py
+python 02-Modelling_DNNs_classification.py -m mold2 cddd mordred fingerprint -s random year
+python 03-Modelling_DNNs_regression.py -m mold2 cddd mordred fingerprint -s random year
 ```
 3. Finally, graph results.
 ```bash
-python 04-Moddeling_plots.py
+python 04-Moddeling_plots.py -i results -d results_dnn -s random -e CV QSAR_CV_random.svg PCM_CV_random.svg DNN_CV_random.svg ALL_CV_random.svg
+python 04-Moddeling_plots.py -i results -d results_dnn -s temporal -e CV QSAR_CV_temporal.svg PCM_CV_temporal.svg DNN_CV_temporal.svg ALL_CV_temporal.svg
+python 04-Moddeling_plots.py -i results -d results_dnn -s random -e Test QSAR_test-set_random.svg PCM_test-set_random.svg DNN_test-set_random.svg ALL_test-set_random.svg
+python 04-Moddeling_plots.py -i results -d results_dnn -s temporal -e Test QSAR_test-set_temporal.svg PCM_test-set_temporal.svg DNN_test-set_temporal.svg ALL_test-set_temporal.svg
 ```
 ______
  ### 3. Generate TMAPs of the chemical space
