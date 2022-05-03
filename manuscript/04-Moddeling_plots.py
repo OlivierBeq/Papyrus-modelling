@@ -108,7 +108,8 @@ def tabulate_results(pcm_qsar_folder: str, dnn_folder:str, evaluate: str = 'Test
     return results
 
 
-def average_over_descriptors(data: pd.DataFrame, split: str = 'random') -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+def average_over_descriptors(data: pd.DataFrame, split: str = 'random')\
+        -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """Prepare modelling results for plotting.
 
     :param data: tabulated results
@@ -124,7 +125,8 @@ def average_over_descriptors(data: pd.DataFrame, split: str = 'random') -> Tuple
     QSAR = aggregated.loc[(aggregated.model == 'QSAR') & (aggregated.split == split)]
     PCM = aggregated.loc[(aggregated.model == 'PCM') & (aggregated.split == split)]
     DNN = aggregated.loc[(aggregated.model == 'stDNN PCM') & (aggregated.split == split)]
-    return QSAR, PCM, DNN
+    complete = aggregated.loc[aggregated.split == split]
+    return QSAR, PCM, DNN, complete
 
 
 def plot_results(data: Union[pd.DataFrame, List[pd.DataFrame]], horizontal: bool = False) -> Figure:
@@ -234,16 +236,19 @@ def main(pcm_qsar_folder: str,
          evaluate: str,
          split: str,
          outputs: Tuple[str, str, str],
-         horizontal: bool = False):
+         horizontal: bool = False,
+         summary: str = None):
     """Main function"""
     if not isinstance(outputs, (list, tuple)) or len(outputs) != 4:
         raise ValueError('four output file names must be provided')
+    if summary is not None and (not isinstance(summary, (list, tuple)) or len(summary) != 2):
+        raise ValueError('two summary file names must be provided')
     # Read in model performance summaries
     results = tabulate_results(pcm_qsar_folder=pcm_qsar_folder,
                                dnn_folder=dnn_folder,
                                evaluate=evaluate)
     # Average over descriptors
-    QSAR, PCM, DNN = average_over_descriptors(data=results, split=split)
+    QSAR, PCM, DNN, complete = average_over_descriptors(data=results, split=split)
     # Generate plots
     qsar_plot = plot_results(QSAR, horizontal=horizontal)
     pcm_plot = plot_results(PCM, horizontal=horizontal)
@@ -256,6 +261,18 @@ def main(pcm_qsar_folder: str,
     pcm_plot.savefig(os.path.join('results_plots', outputs[1]))
     dnn_plot.savefig(os.path.join('results_plots', outputs[2]))
     all_plot.savefig(os.path.join('results_plots', outputs[3]))
+    # Save summary
+    if summary is not None:
+        # Write summary file (all descriptors)
+        results.to_csv(os.path.join('results_plots', summary[0]), sep='\t')
+        # Write summary averaged across descriptors
+        complete.groupby(by=['target class', 'model', 'split', 'variable'])['value']\
+            .aggregate('mean')\
+            .reset_index()\
+            .pivot(index=['target class', 'model'],
+                   columns=['split', 'variable'],
+                   values=['value'])\
+            .to_csv(os.path.join('results_plots', summary[1]), sep='\t')
 
 
 if __name__ == '__main__':
@@ -293,10 +310,17 @@ if __name__ == '__main__':
                         default=False,
                         required=False,
                         help='Make the combined plot be horizontal.')
+    parser.add_argument('--summary',
+                        default=None,
+                        nargs=2,
+                        required=False,
+                        help=('Names of the tabulated summary and the averaged files\n'
+                             '(default: not written to disk)'))
     args = parser.parse_args()
     main(pcm_qsar_folder=args.indir,
          dnn_folder=args.dnn_indir,
          evaluate='Test set' if args.eval == 'Test' else 'Mean',
          split= 'random' if args.split == 'random' else 'year',
          outputs=args.OUT_FILES,
-         horizontal=args.horizontal)
+         horizontal=args.horizontal,
+         summary=args.summary)

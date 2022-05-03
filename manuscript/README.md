@@ -28,10 +28,10 @@ python 03-Modelling_DNNs_regression.py -m mold2 cddd mordred fingerprint -s rand
 ```
 3. Finally, graph results.
 ```bash
-python 04-Moddeling_plots.py -i results -d results_dnn -s random -e CV QSAR_CV_random.svg PCM_CV_random.svg DNN_CV_random.svg ALL_CV_random.svg
-python 04-Moddeling_plots.py -i results -d results_dnn -s temporal -e CV QSAR_CV_temporal.svg PCM_CV_temporal.svg DNN_CV_temporal.svg ALL_CV_temporal.svg
-python 04-Moddeling_plots.py -i results -d results_dnn -s random -e Test QSAR_test-set_random.svg PCM_test-set_random.svg DNN_test-set_random.svg ALL_test-set_random.svg
-python 04-Moddeling_plots.py -i results -d results_dnn -s temporal -e Test QSAR_test-set_temporal.svg PCM_test-set_temporal.svg DNN_test-set_temporal.svg ALL_test-set_temporal.svg
+python 04-Moddeling_plots.py -i results -d results_dnn -s random -e CV --summary CV_random.tsv avg_CV_random.tsv QSAR_CV_random.svg PCM_CV_random.svg DNN_CV_random.svg ALL_CV_random.svg
+python 04-Moddeling_plots.py -i results -d results_dnn -s temporal -e CV --summary CV_temporal.tsv avg_CV_temporal.tsv QSAR_CV_temporal.svg PCM_CV_temporal.svg DNN_CV_temporal.svg ALL_CV_temporal.svg
+python 04-Moddeling_plots.py -i results -d results_dnn -s random -e Test --summary test-set_random.tsv avg_test-set_random.tsv QSAR_test-set_random.svg PCM_test-set_random.svg DNN_test-set_random.svg ALL_test-set_random.svg
+python 04-Moddeling_plots.py -i results -d results_dnn -s temporal -e Test --summary test-set_temporal.tsv avg_test-set_temporal.tsv QSAR_test-set_temporal.svg PCM_test-set_temporal.svg DNN_test-set_temporal.svg ALL_test-set_temporal.svg
 ```
 ______
  ### 3. Generate TMAPs of the chemical space
