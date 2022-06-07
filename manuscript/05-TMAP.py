@@ -9,6 +9,7 @@ from typing import List, Union
 
 import pystow
 import pandas as pd
+import matplotlib as mpl
 from rdkit import Chem
 from rdkit.Chem import AllChem
 from tqdm import tqdm, trange
@@ -267,11 +268,12 @@ def get_tmap_MHFP(root_dir, struct_dir, out_dir):
                                            ring_size],
                                        'labels': labels},
                   shader="smoothCircle",
-                  point_scale=2.0,
-                  max_point_size=20,
+                  point_scale=1.0,
+                  max_point_size=2,
                   legend_labels=[source_labels],
                   categorical=[True, False, False, False, False],
-                  colormap=["Accent", "rainbow", "rainbow", "rainbow", "rainbow"],
+                  colormap=[mpl.colors.ListedColormap(['#fd6767', '#fdc086', '#beaed4', '#386cb0', '#666666', '#7fc97F', '#bf5b17', '#f06eaf']),
+                            "rainbow", "rainbow", "rainbow", "rainbow"],
                   series_title=[
                       "Source",
                       "Heavy atom count",
