@@ -286,6 +286,12 @@ def get_tmap_MHFP(root_dir, struct_dir, out_dir):
     f.add_tree('papyrus_nostereo', {"from": s, "to": t}, point_helper="Papyrus_nostereo", color="#222222")
     print('Saving tmap')
     f.plot(out_plot, template='smiles')
+    # Modify HTML file path to JS to relative
+    with open(f'{out_plot}.html', 'r') as fh:
+        content = fh.read()
+    content = content.replace(os.path.abspath(f'{out_plot}.js'), os.path.basename(f'{out_plot}.js'))
+    with open(f'{out_plot}.html', 'w') as oh:
+        oh.write(content)
 
 
 def get_tmap_UniRep(root_dir, desc_dir, out_dir):
@@ -404,6 +410,12 @@ def get_tmap_UniRep(root_dir, desc_dir, out_dir):
     f.add_tree('papyrus_nostereo', {"from": s, "to": t}, point_helper="Papyrus_nostereo", color="#222222")
     print('Saving tmap')
     f.plot(out_plot)
+    # Modify HTML file path to JS to relative
+    with open(f'{out_plot}.html', 'r') as fh:
+        content = fh.read()
+    content = content.replace(os.path.abspath(f'{out_plot}.js'), os.path.basename(f'{out_plot}.js'))
+    with open(f'{out_plot}.html', 'w') as oh:
+        oh.write(content)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Create TMAPs of the Papyrus data.',
