@@ -130,13 +130,13 @@ def get_sources(tsv_file):
     overlaps_others = grouped2.loc[grouped2['source'].str.contains(';') & ~grouped2['source'].str.contains('ChEMBL'), [identifier, 'source']]
     # Rename sources
     unique_excape.loc[:, 'source'] = 'ExCAPE-DB only'
-    unique_chembl.loc[:, 'source'] = 'ChEMBL29 only'
+    unique_chembl.loc[:, 'source'] = 'ChEMBL30 only'
     unique_sharma.loc[:, 'source'] = 'Sharma only'
     unique_christ.loc[:, 'source'] = 'Christmann-Franck only'
     unique_merget.loc[:, 'source'] = 'Merget only'
-    overlap_chembl_excape.loc[:, 'source'] = 'ChEMBL29 & ExCAPE-DB'
+    overlap_chembl_excape.loc[:, 'source'] = 'ChEMBL30 & ExCAPE-DB'
     overlaps_chembl.loc[:, 'source'] = 'All but ExCAPE-DB'
-    overlaps_others.loc[:, 'source'] = 'All but ChEMBL29'
+    overlaps_others.loc[:, 'source'] = 'All but ChEMBL30'
     # Obtain dicts
     unique_excape = dict(unique_excape.values.tolist())
     unique_chembl = dict(unique_chembl.values.tolist())
@@ -160,9 +160,9 @@ def get_tmap_MHFP(root_dir, struct_dir, out_dir):
     out_plot = os.path.join(out_dir, 'Papyrus_TMAP_MHFP')
     coordinate_file = os.path.join(out_dir, 'Papyrus_MHFP_coordinates.dat')
     # Input file of activities
-    activity_file = os.path.join(root_dir, '05.4_combined_set_without_stereochemistry.tsv.xz')
+    activity_file = os.path.join(root_dir, '05.5_combined_set_without_stereochemistry.tsv.xz')
     # Input file of structures
-    struct_file = os.path.join(struct_dir, '05.4_combined_2D_set_without_stereochemistry.sd.xz')
+    struct_file = os.path.join(struct_dir, '05.5_combined_2D_set_without_stereochemistry.sd.xz')
 
     # LSH forest encoder
     lf = tm.LSHForest(1024, 128, 8)
@@ -170,7 +170,7 @@ def get_tmap_MHFP(root_dir, struct_dir, out_dir):
     if not os.path.isfile(out_dat):
         enc = MHFPEncoder(1024)
         fps = []
-        for mol in tqdm(get_mols(struct_file), total=1268606, ncols=90, dec='Encoding molecules'):
+        for mol in tqdm(get_mols(struct_file), total=1268606, ncols=90, desc='Encoding molecules'):
             fps.append(tm.VectorUint(enc.encode_mol(mol)))
         lf.batch_add(fps)
         print('Added fingerprints to LSH')
@@ -292,8 +292,8 @@ def get_tmap_UniRep(root_dir, desc_dir, out_dir):
     prot_prop_file = os.path.join(out_dir, 'Papyrus_tmap_prot_props.pickle')
     out_plot = os.path.join(out_dir, 'Papyrus_TMAP_UniRep')
     # Input files
-    seq_file = os.path.join(root_dir, '05.4_combined_set_protein_targets.tsv.xz')
-    desc_file = os.path.join(desc_dir, '05.4_combined_prot_embeddings_unirep.tsv.xz')
+    seq_file = os.path.join(root_dir, '05.5_combined_set_protein_targets.tsv.xz')
+    desc_file = os.path.join(desc_dir, '05.5_combined_prot_embeddings_unirep.tsv.xz')
     # LSH and Minhash encoders
     lf = tm.LSHForest(6660, 128, 8)
     enc = tm.Minhash()
@@ -430,9 +430,9 @@ if __name__ == '__main__':
                         help='Should a TMAP be generated for target sequences.',
                         dest='proteintmap')
     args = parser.parse_args()
-    version = process_data_version(args.version)
     if args.indir is not None:
         os.environ['PYSTOW_HOME'] = os.path.abspath(args.indir)
+    version = process_data_version(args.version, os.environ['PYSTOW_HOME'])
     papyrus_root = pystow.module('papyrus', version)
     structure_folder = papyrus_root.join('structures')
     descriptor_folder = papyrus_root.join('descriptors')
@@ -440,11 +440,11 @@ if __name__ == '__main__':
     outdir = os.path.join(os.path.abspath(args.outdir), 'tmap')
     os.makedirs(outdir, exist_ok=True)
     # Create TMAP of molecular structures
-    get_tmap_MHFP(papyrus_root.base.as_posix(),
+    get_tmap_MHFP(str(papyrus_root.base),
                   structure_folder,
                   outdir)
     # Create TMAP of protein sequences
     if args.proteintmap:
-        get_tmap_UniRep(papyrus_root.base.as_posix(),
+        get_tmap_UniRep(str(papyrus_root.base),
                         descriptor_folder,
                         outdir)

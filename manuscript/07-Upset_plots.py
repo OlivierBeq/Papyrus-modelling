@@ -28,7 +28,7 @@ def compound_upset_plot(sd_xz, tsv_xz, plot_png, **kwargs):
     # Read sources and connectivities
     sources = pd.read_csv(tsv_xz, sep='\t', usecols=['connectivity', 'source'])
     # Get rows with corresponding sources and identify their indices in the set of molecules
-    ChEMBL_connectivities = sources[sources.source.str.contains('ChEMBL29')].connectivity.unique()
+    ChEMBL_connectivities = sources[sources.source.str.contains('ChEMBL30')].connectivity.unique()
     ChEMBL_indices = connectivities[connectivities.connectivity.isin(ChEMBL_connectivities)].index.tolist()
     ExCAPE_connectivities = sources[sources.source.str.contains('ExCAPE-DB')].connectivity.unique()
     ExCAPE_indices = connectivities[connectivities.connectivity.isin(ExCAPE_connectivities)].index.tolist()
@@ -45,21 +45,22 @@ def compound_upset_plot(sd_xz, tsv_xz, plot_png, **kwargs):
     del Klaeger_connectivities, Merget_connectivities, Christmann_connectivities
     # Construct UpSet plot
     data = from_contents(
-        {'ExCAPE-DB': ExCAPE_indices, 'ChEMBL29': ChEMBL_indices, 'Merget et al. (2016)': Merget_indices,
+        {'ExCAPE-DB': ExCAPE_indices, 'ChEMBL30': ChEMBL_indices, 'Merget et al. (2016)': Merget_indices,
          'Christmann-Franck et al. (2016)': Christmann_indices, 'Sharma et al. (2016)': Sharma_indices,
          'Klaeger et al. (2017)': Klaeger_indices})
     upset = UpSet(data, subset_size='count', sort_by='degree', min_subset_size=1, show_counts=True, logscale=True,
                   intersection_label_rotation=45)
     plot = upset.plot()
     # Save plot
-    plt.savefig(plot_png, **kwargs)
+    plt.savefig(f'{plot_png}.png', **kwargs)
+    plt.savefig(f'{plot_png}.svg', **kwargs)
 
 
 def activity_upset_plot(sd_xz, tsv_xz, plot_png, **kwargs):
     # Read sources
     sources = pd.read_csv(tsv_xz, sep='\t', usecols=['source'])
     # Get rows with corresponding sources and identify their indices in the set of molecules
-    ChEMBL_indices = sources[sources.source.str.contains('ChEMBL29')].index.tolist()
+    ChEMBL_indices = sources[sources.source.str.contains('ChEMBL30')].index.tolist()
     ExCAPE_indices = sources[sources.source.str.contains('ExCAPE-DB')].index.tolist()
     Sharma_indices = sources[sources.source.str.contains('Sharma2016')].index.tolist()
     Klaeger_indices = sources[sources.source.str.contains('Klaeger2017')].index.tolist()
@@ -69,15 +70,15 @@ def activity_upset_plot(sd_xz, tsv_xz, plot_png, **kwargs):
     del sources
     # Construct UpSet plot
     data = from_contents(
-        {'ExCAPE-DB': ExCAPE_indices, 'ChEMBL29': ChEMBL_indices, 'Merget et al. (2016)': Merget_indices,
+        {'ExCAPE-DB': ExCAPE_indices, 'ChEMBL30': ChEMBL_indices, 'Merget et al. (2016)': Merget_indices,
          'Christmann-Franck et al. (2016)': Christmann_indices, 'Sharma et al. (2016)': Sharma_indices,
          'Klaeger et al. (2017)': Klaeger_indices})
     upset = UpSet(data, subset_size='count', sort_by='degree', min_subset_size=1, show_counts=True, logscale=True,
                   intersection_label_rotation=45)
     plot = upset.plot()
     # Save plot
-    plt.savefig(plot_png, **kwargs)
-
+    plt.savefig(f'{plot_png}.png', **kwargs)
+    plt.savefig(f'{plot_png}.svg', **kwargs)
 
 def target_upset_plot(activity_tsv_xz, target_tsv_xz, plot_png, **kwargs):
     # Read sources
@@ -85,7 +86,7 @@ def target_upset_plot(activity_tsv_xz, target_tsv_xz, plot_png, **kwargs):
     # Get order of targets
     targets = pd.read_csv(target_tsv_xz, sep='\t', usecols=['target_id'])
     # Get rows with corresponding sources and identify their indices in the set of molecules
-    ChEMBL_targets = sources[sources.source.str.contains('ChEMBL29')].target_id.unique()
+    ChEMBL_targets = sources[sources.source.str.contains('ChEMBL30')].target_id.unique()
     ChEMBL_indices = targets[targets.target_id.isin(ChEMBL_targets)].index.tolist()
     ExCAPE_targets = sources[sources.source.str.contains('ExCAPE-DB')].target_id.unique()
     ExCAPE_indices = targets[targets.target_id.isin(ExCAPE_targets)].index.tolist()
@@ -102,23 +103,23 @@ def target_upset_plot(activity_tsv_xz, target_tsv_xz, plot_png, **kwargs):
     del Klaeger_targets, Merget_targets, Christmann_targets
     # Construct UpSet plot
     data = from_contents(
-        {'ExCAPE-DB': ExCAPE_indices, 'ChEMBL29': ChEMBL_indices, 'Merget et al. (2016)': Merget_indices,
+        {'ExCAPE-DB': ExCAPE_indices, 'ChEMBL30': ChEMBL_indices, 'Merget et al. (2016)': Merget_indices,
          'Christmann-Franck et al. (2016)': Christmann_indices, 'Sharma et al. (2016)': Sharma_indices,
          'Klaeger et al. (2017)': Klaeger_indices})
     upset = UpSet(data, subset_size='count', sort_by='degree', min_subset_size=1, show_counts=True, logscale=True,
                   intersection_label_rotation=45)
     plot = upset.plot()
     # Save plot
-    plt.savefig(plot_png, **kwargs)
-
+    plt.savefig(f'{plot_png}.png', **kwargs)
+    plt.savefig(f'{plot_png}.svg', **kwargs)
 
 def main(root_dir: str,
          out_dir: str,
          version: str):
-    version = process_data_version(version)
     # Determine paths of input files
     if root_dir is not None:
         os.environ['PYSTOW_HOME'] = os.path.abspath(root_dir)
+    version = process_data_version(version, os.environ['PYSTOW_HOME'])
     papyrus_root = pystow.module('papyrus', version)
     sd_file = papyrus_root.join('structures', name=f'{version}_combined_2D_set_without_stereochemistry.sd.xz').as_posix()
     activity_file = papyrus_root.join(name=f'{version}_combined_set_without_stereochemistry.tsv.xz').as_posix()
@@ -128,11 +129,11 @@ def main(root_dir: str,
     os.makedirs(outdir, exist_ok=True)
     # Create upset plots
     compound_upset_plot(sd_file, activity_file,
-                        os.path.join(outdir, 'Papyrus_upsetplot_molecularSpace.png'), dpi=1200)
+                        os.path.join(outdir, 'Papyrus_upsetplot_molecularSpace'), dpi=1200)
     activity_upset_plot(sd_file, activity_file,
-                        os.path.join(outdir, 'Papyrus_upsetplot_activitySpace.png'), dpi=1200)
+                        os.path.join(outdir, 'Papyrus_upsetplot_activitySpace'), dpi=1200)
     target_upset_plot(activity_file, protein_file,
-                      os.path.join(outdir, 'Papyrus_upsetplot_targetSpace.png'), dpi=1200)
+                      os.path.join(outdir, 'Papyrus_upsetplot_targetSpace'), dpi=1200)
 
 
 if __name__ == '__main__':
